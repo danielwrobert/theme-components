@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package component_s
+ * @package <%= appName =>
  */
 
 ?><!DOCTYPE html>
@@ -25,8 +25,14 @@
 	<header id="masthead" class="site-header" role="banner">
 		
 		<!-- INSERT: branding/branding.php -->
+		@@include( './components/branding/branding.php', {
+			"appNameSlug": "<%= appNameSlug %>"
+		} )
 
 		<!-- INSERT: top-navigation/top-navigation.php -->
+		@@include( './componenets/top-navigation/top-navigation.php', {
+			"appNameSlug": "<%= appNameSlug %>"
+		} )
 
 	</header><!-- #masthead -->
 

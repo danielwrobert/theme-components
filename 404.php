@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package component_s
+ * @package <%= appName =>
  */
 
 get_header(); ?>
@@ -11,6 +11,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<!-- INSERT: error/error.php -->
+		@@include( './components/error/error.php', {
+			"appNameSlug": "<%= appNameSlug %>"
+		} )
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
